@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <header class="dashboard-header">
+            <h1>Weekly Health Report</h1>
+            <p>Your health overview for the week</p>
+        </header>
+
+        <!-- Metrics Grid -->
+        <div class="metrics-grid">
+            <!-- Heart Rate Card -->
+            <div class="metric-card">
+                <div class="metric-icon heart-icon">❤️</div>
+                <div class="metric-content">
+                    <h3>Heart Rate</h3>
+                    <div class="metric-value">114</div>
+                    <div class="metric-label">Average BPM</div>
+                </div>
+            </div>
+
+            <!-- Steps Card -->
+            <div class="metric-card">
+                <div class="metric-icon steps-icon">👣</div>
+                <div class="metric-content">
+                    <h3>Daily Steps</h3>
+                    <div class="metric-value">8,642</div>
+                    <div class="metric-label">Daily Average</div>
+                </div>
+            </div>
+
+            <!-- Calories Card -->
+            <div class="metric-card">
+                <div class="metric-icon calories-icon">🔥</div>
+                <div class="metric-content">
+                    <h3>Calories</h3>
+                    <div class="metric-value">2,150</div>
+                    <div class="metric-label">Daily Burn</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-section">
+            <div class="chart-container">
+                <h3>Weekly Steps Overview</h3>
+                <canvas id="stepsChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Heart Rate Trends</h3>
+                <canvas id="heartRateChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Health Insights -->
+        <div class="insights-container">
+            <h2>Weekly Health Insights</h2>
+            <div class="insights-grid">
+                <div class="insight-card physical">
+                    <h4>Physical Activity</h4>
+                    <p>Currently averaging 8,642 steps daily. Aim for 10,000 steps for optimal health.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 86%;"></div>
+                    </div>
+                </div>
+
+                <div class="insight-card heart">
+                    <h4>Heart Health</h4>
+                    <p>Average heart rate: 114 BPM. Maintaining good cardiovascular health.</p>
+                    <div class="heart-rate-indicator">Normal Range</div>
+                </div>
+
+                <div class="insight-card sleep">
+                    <h4>Sleep Pattern</h4>
+                    <p>Average sleep: 6.8 hours. Recommended: 7-9 hours.</p>
+                    <div class="sleep-quality">Quality: Good</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
